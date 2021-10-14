@@ -1,0 +1,33 @@
+<hello name="{{ name }}"></hello>
+<p>Demo of asnyc pipe or sunscribed observable..</p>
+
+<p>Async pipe..</p>
+
+<li *ngFor="let data of someData$ | async">
+  Item={{ data.desc }}. Value={{ data.data }}
+</li>
+
+<p>Subscribed observable..</p>
+
+<li *ngFor="let data of moreData">
+  Item={{ data.desc }}. Value={{ data.data }}
+</li>
+
+<p>Static variable..</p>
+
+<li *ngFor="let data of simpleData">
+  Item={{ data.desc }}. Value={{ data.data }}
+</li>
+
+<br />
+
+<p>Modify Something</p>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  id="btnSearchLoans"
+  (click)="eventClick($event)"
+>
+  Change Data
+</button>
